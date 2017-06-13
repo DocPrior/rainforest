@@ -1,25 +1,25 @@
 class ProductsController < ApplicationController
 
-  def 'index'
+  def index
     @products = Product.all
   end
 
-  def 'show'
+  def show
   end
 
-  def 'new'
+  def new
   end
 
-  def 'create'
+  def create
   end
 
-  def 'edit'
+  def edit
   end
 
-  def 'update'
+  def update
   end
 
-  def 'destroy'
+  def destroy
   end
 
 end
