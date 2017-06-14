@@ -25,19 +25,19 @@ Product.create(
   )
 
 Review.create(
-  product_id: Product.last,
+  product_id: 2,
   comment: 'Stinks!',
   rating: 1
 )
 
 Review.create(
-  product_id: Product.first,
+  product_id: 1,
   comment: 'Yummy!',
   rating: 5
 )
 
 Review.create(
-  product_id: Product.last,
+  product_id: 2,
   comment: 'meh',
   rating: '3'
 )
