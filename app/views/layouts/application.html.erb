@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav>
+      <a href="<%= root_path %>">Home</a>
+    </nav>
+    <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert"><%= flash[:alert] %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

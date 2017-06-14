@@ -3,5 +3,5 @@
 <%=link_to("Add New Product", new_product_path) %>
 
   <% @products.each do |product| %>
-  <p><%=link_to(product.name, product_path(product.id))%>, <%=product.description%>, <%=product.price_in_cents%></p>
+  <p><%=link_to(product.name, product_path(product.id))%>, <%=product.description%>, <%=product.price_in_dollars%></p>
   <%end%>
