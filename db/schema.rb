@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20170614182736) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "product_id"
     t.text "comment"
     t.integer "rating"
