@@ -2257,3 +2257,1518 @@ Did you mean?  @product):
   
 app/views/products/_form.html.erb:2:in `_app_views_products__form_html_erb__4588963177210190937_70237883522400'
 app/views/products/show.html.erb:11:in `_app_views_products_show_html_erb__3183627770733817767_70237883686500'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sloth Repelant"], ["description", "Take the fast lane!"], ["price_in_cents", 1800], ["created_at", "2017-06-14 21:52:08.189210"], ["updated_at", "2017-06-14 21:52:08.189210"]]
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Snake Bite Kit"], ["description", "Ouch!"], ["price_in_cents", 2000], ["created_at", "2017-06-14 21:52:08.269268"], ["updated_at", "2017-06-14 21:52:08.269268"]]
+  [1m[35m (77.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rain Coat"], ["description", "Stay dry!"], ["price_in_cents", 1600], ["created_at", "2017-06-14 21:52:08.355078"], ["updated_at", "2017-06-14 21:52:08.355078"]]
+  [1m[35m (65.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "Stinks!"], ["rating", 1], ["created_at", "2017-06-14 21:52:08.446695"], ["updated_at", "2017-06-14 21:52:08.446695"]]
+  [1m[35m (70.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 1], ["comment", "Yummy!"], ["rating", 5], ["created_at", "2017-06-14 21:52:08.525569"], ["updated_at", "2017-06-14 21:52:08.525569"]]
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "meh"], ["rating", 3], ["created_at", "2017-06-14 21:52:08.608720"], ["updated_at", "2017-06-14 21:52:08.608720"]]
+  [1m[35m (68.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:12:09 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (170.1ms)
+  Rendered products/show.html.erb within layouts/application (176.0ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00555ef1c4a928>:0x00555ef1c07010>
+Did you mean?  @product):
+    1: 
+    2: <%= form_for(product) do |f| %>
+    3:   <p>
+    4:     <%= f.label :name %><br>
+    5:     <%= f.text_field :name %>
+  
+app/views/products/_form.html.erb:2:in `_app_views_products__form_html_erb__4261445266502853247_70010152155240'
+app/views/products/show.html.erb:11:in `_app_views_products_show_html_erb___3799893624094756449_46933135761120'
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:14:05 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (263.7ms)
+  Rendered products/show.html.erb within layouts/application (266.6ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00555ef1c4a928>:0x00555ef31a3630>
+Did you mean?  @product):
+    1: 
+    2: <%= form_for(product) do |f| %>
+    3:   <p>
+    4:     <%= f.label :name %><br>
+    5:     <%= f.text_field :name %>
+  
+app/views/products/_form.html.erb:2:in `_app_views_products__form_html_erb__4261445266502853247_46933146082040'
+app/views/products/show.html.erb:11:in `_app_views_products_show_html_erb___3799893624094756449_46933146961800'
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:16:33 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (200.9ms)
+  Rendered products/show.html.erb within layouts/application (204.4ms)
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00555ef1c4a928>:0x007f59043b3a58>
+Did you mean?  @product):
+    1: 
+    2: <%= form_for(product) do |f| %>
+    3:   <p>
+    4:     <%= f.label :name %><br>
+    5:     <%= f.text_field :name %>
+  
+app/views/products/_form.html.erb:2:in `_app_views_products__form_html_erb__4261445266502853247_70010149782340'
+app/views/products/show.html.erb:11:in `_app_views_products_show_html_erb___3799893624094756449_70010149905020'
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:16:57 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (14.5ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 185ms (Views: 178.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1/reviews/5/edit" for 127.0.0.1 at 2017-06-14 18:17:01 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/products/1/reviews/5/edit" for 127.0.0.1 at 2017-06-14 18:17:09 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/products" for 127.0.0.1 at 2017-06-14 18:17:41 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (117.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (62.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20170613171838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price_in_cents" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613171838"]]
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReviews (20170614195303)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "comment" text, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170614195303"]]
+  [1m[35m (71.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-14 22:18:22.868648"], ["updated_at", "2017-06-14 22:18:22.868648"]]
+  [1m[35m (62.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sloth Repelant"], ["description", "Take the fast lane!"], ["price_in_cents", 1800], ["created_at", "2017-06-14 22:18:29.346157"], ["updated_at", "2017-06-14 22:18:29.346157"]]
+  [1m[35m (107.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Snake Bite Kit"], ["description", "Ouch!"], ["price_in_cents", 2000], ["created_at", "2017-06-14 22:18:29.458328"], ["updated_at", "2017-06-14 22:18:29.458328"]]
+  [1m[35m (59.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rain Coat"], ["description", "Stay dry!"], ["price_in_cents", 1600], ["created_at", "2017-06-14 22:18:29.525646"], ["updated_at", "2017-06-14 22:18:29.525646"]]
+  [1m[35m (100.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "Stinks!"], ["rating", 1], ["created_at", "2017-06-14 22:18:29.676775"], ["updated_at", "2017-06-14 22:18:29.676775"]]
+  [1m[35m (65.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 1], ["comment", "Yummy!"], ["rating", 5], ["created_at", "2017-06-14 22:18:29.754578"], ["updated_at", "2017-06-14 22:18:29.754578"]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "meh"], ["rating", 3], ["created_at", "2017-06-14 22:18:29.828692"], ["updated_at", "2017-06-14 22:18:29.828692"]]
+  [1m[35m (70.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products" for 127.0.0.1 at 2017-06-14 18:18:43 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 197ms (Views: 184.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:18:45 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.9ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 57ms (Views: 35.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:18:47 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:18:57 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:20:08 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (103.0ms)
+  Rendered reviews/edit.html.erb within layouts/application (104.2ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `review_path' for #<#<Class:0x007f4d70027668>:0x007f4d70025980>
+Did you mean?  view_paths):
+    1: <%= form_for(review) do |f| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= f.label :comment %><br />
+  
+app/views/reviews/_form.html.erb:1:in `_app_views_reviews__form_html_erb__4512920340151858165_69985284138140'
+app/views/reviews/edit.html.erb:14:in `_app_views_reviews_edit_html_erb__1826422019493201533_69985284210560'
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:20:19 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (139.7ms)
+  Rendered reviews/edit.html.erb within layouts/application (141.2ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `review_path' for #<#<Class:0x007f4d70027668>:0x007f4d78fad080>
+Did you mean?  view_paths):
+    1: <%= form_for(@review) do |f| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= f.label :comment %><br />
+  
+app/views/reviews/_form.html.erb:1:in `_app_views_reviews__form_html_erb__4512920340151858165_69985359626000'
+app/views/reviews/edit.html.erb:14:in `_app_views_reviews_edit_html_erb__1826422019493201533_69985359459540'
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:20:39 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (160.2ms)
+  Rendered reviews/edit.html.erb within layouts/application (162.1ms)
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007f4d70027668>:0x007f4d74004380>
+Did you mean?  @product):
+    1: <%= form_for([product, review]) do |f| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= f.label :comment %><br />
+  
+app/views/reviews/_form.html.erb:1:in `_app_views_reviews__form_html_erb__4512920340151858165_69985284204020'
+app/views/reviews/edit.html.erb:14:in `_app_views_reviews_edit_html_erb__1826422019493201533_69985317693360'
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:20:48 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.6ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:21:00 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVh+OkJsnxv1ywFHlmDjBFm47YQlecGg1ppquPDEt1vn0KXPNlqUHbNpnsyxINd05nz3p5nESjuT+6j6RlCVSA==", "review"=>{"comment"=>"Stinky!", "rating"=>"1"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `reviews' for nil:NilClass):
+  
+app/controllers/reviews_controller.rb:21:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:21:45 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVh+OkJsnxv1ywFHlmDjBFm47YQlecGg1ppquPDEt1vn0KXPNlqUHbNpnsyxINd05nz3p5nESjuT+6j6RlCVSA==", "review"=>{"comment"=>"Stinky!", "rating"=>"1"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["comment", "Stinky!"], ["updated_at", "2017-06-14 22:21:45.662201"], ["id", 1]]
+  [1m[35m (110.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = ?, "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["comment", "Stinky!"], ["rating", 1], ["updated_at", "2017-06-14 22:21:45.776748"], ["id", 3]]
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 244ms (ActiveRecord: 207.2ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 18:21:45 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 81ms (Views: 58.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:21:50 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.9ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 18:21:54 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:21:55 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.5ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:22:44 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.9ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 57ms (Views: 30.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:22:46 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+    if @product.@review.update(review_params)
+                       ^
+/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:22:58 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (1.9ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 19.4ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:23:03 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WO/9jcG1srcNVZHECFmUT0iFZe8jim39xmBLncjVDnbaZyZ4tYO5sUv3Dk8vGaA/90F/zJ835maDAYnffkEsZQ==", "review"=>{"comment"=>"Stinky!", "rating"=>"2"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 2], ["updated_at", "2017-06-14 22:23:03.526639"], ["id", 1]]
+  [1m[35m (109.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 2], ["updated_at", "2017-06-14 22:23:03.646347"], ["id", 3]]
+  [1m[35m (64.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 209ms (ActiveRecord: 176.9ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 18:23:03 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 53ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 18:23:05 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.1ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 18:23:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:23:11 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.4ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:23:19 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.3ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:24:48 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+    if @product.@review.update(review_params)
+                       ^
+/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:24:58 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (1.9ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 20.1ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:25:13 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0xsm+2gnlWMfHAUIhYKuLd8YRDie5TIosMbqb3Hd73lxLdumZaVU8re758FVj7ICLh7M17GH1PnotnrC1NVrg==", "review"=>{"comment"=>"Stinky!", "rating"=>"2"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 19ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 18:25:13 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:25:17 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.8ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:25:19 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (7.6ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 77ms (Views: 66.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:26:05 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.1ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 26.6ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:26:11 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"plmA2g4IShGQS3spSqnoDKPvJdMpvnO85Jo3oMIKOeck0Vsvej5BF9bp5KJt6dx8HCs/8JUD+Ceh+/XidJ4b9A==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:26:23 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"plmA2g4IShGQS3spSqnoDKPvJdMpvnO85Jo3oMIKOeck0Vsvej5BF9bp5KJt6dx8HCs/8JUD+Ceh+/XidJ4b9A==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = ?, "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["comment", "Stinky!"], ["rating", 3], ["updated_at", "2017-06-14 22:26:24.144833"], ["id", 2]]
+  [1m[35m (77.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 146ms (ActiveRecord: 81.5ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 18:26:24 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 56ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:26:27 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.9ms) [cache miss]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:26:30 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.5ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 58ms (Views: 46.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:26:32 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V51vPyXseJ7w3IrZE/PWLj/MsM5MmR/BhXOfFvC15qiLsnXjNynKfhNLqEAXq3Ujrq69FGu8lI4VDu/VZqndSg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 17ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 18:26:32 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 18:26:34 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.4ms) [cache miss]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:26:52 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+    if @product.@review.update(review_params)
+                       ^
+/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:27:12 -0400
+  
+SyntaxError (/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+    if product.@review.update(review_params)
+                      ^
+/home/sara/Desktop/teamHal/projects/rainforest/app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/reviews_controller.rb:22: syntax error, unexpected tIVAR, expecting '('
+app/controllers/reviews_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 18:29:26 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.0ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 21.2ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:29:31 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 3], ["updated_at", "2017-06-14 22:29:31.205971"], ["id", 1]]
+  [1m[35m (89.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 3], ["updated_at", "2017-06-14 22:29:31.300458"], ["id", 3]]
+  [1m[35m (63.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 155.1ms)
+
+
+  
+NoMethodError (undefined method `save' for #<Array:0x007f4d787674c0>):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:29:57 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `update' for #<Array:0x007f4d78f8b188>):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:30:27 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `update' for #<Array:0x007f4d79d6aee8>):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:31:13 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/reviews_controller.rb:21:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 18:32:00 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/reviews_controller.rb:21:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 19:16:48 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `review' for #<Product:0x0055ed93433880>
+Did you mean?  reviews
+               reviews=):
+  
+app/controllers/reviews_controller.rb:21:in `update'
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 19:17:02 -0400
+Processing by ReviewsController#update as HTML
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:17:12 -0400
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+hnSpXDisUIvSaLAq87VJ2yIGKFb73sMpjMMeQ/9C0tYLy/4fWBw04fuQAl7w8kInY6QTnSNnd3+Q5zUqvWPg==", "review"=>{"comment"=>"Stinky!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 2], ["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 2.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 162ms (Views: 156.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:17:14 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (13.9ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 60ms (Views: 40.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:17:16 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (14.7ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 71ms (Views: 54.7ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:17:23 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NNXwcvNvg/5cds9BganvmEokeskp3pkk8pWI5Mu+YsecduF8qrDelrHaMIlKMy5n5VtEmFg746kNA9j4w5Spaw==", "review"=>{"comment"=>"Stinky!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:17:46 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NNXwcvNvg/5cds9BganvmEokeskp3pkk8pWI5Mu+YsecduF8qrDelrHaMIlKMy5n5VtEmFg746kNA9j4w5Spaw==", "review"=>{"comment"=>"Stinky!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 4], ["updated_at", "2017-06-14 23:17:46.433643"], ["id", 2]]
+  [1m[35m (87.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 123ms (ActiveRecord: 90.5ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:17:46 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:17:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.3ms) [cache miss]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:18:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:18:04 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.2ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 19:18:10 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.4ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 19:18:18 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wBC9nthrpNltZ+/pcTG1qNSMzx+lnRucAJE+a15Cy/QcP6dCyq4WOY7wzXB1aRalRe7CxYK4kNOQ7E6oyF7wFg==", "review"=>{"comment"=>"Yummy!", "rating"=>"3"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["comment", "Yummy!"], ["updated_at", "2017-06-14 23:18:18.223621"], ["id", 1]]
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 99ms (ActiveRecord: 85.1ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:18:18 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 72ms (Views: 45.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:18:21 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.3ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 19:18:34 -0400
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NhgVXteJOXwkK1JleoU4OyBgIOL3PmLs9Jz2bIIREjm0kM6ro78yemKJze5dxQxLn6Q6wUuD6Xex/TQuNIUwKg==", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.9ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 1]]
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 100ms (ActiveRecord: 85.3ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:18:34 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:18:36 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.4ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2017-06-14 19:18:59 -0400
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D17plIQX1+B9NRieUtDDPpRkyWfK+fi2tSBB/3ILzx/2jAc+2FcxWfT4X2Z8KRoGj730pxOeJ1zgR3E9H8fRPw==", "product"=>{"name"=>"Snake Bite Kit", "description"=>"Ouch!", "price_in_cents"=>"2000"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:18:59 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.6ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:23:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:23:53 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.9ms) [cache miss]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 93ms (Views: 86.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2017-06-14 19:24:14 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.5ms) [cache miss]
+  Rendered products/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 48ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:24:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:24:21 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.0ms) [cache miss]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:25:47 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial review/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/sara/Desktop/teamHal/projects/rainforest/app/views"
+):
+     8: 
+     9: <h4>New Review</h4>
+    10: 
+    11: <%= render '/review/form', review: @review %>
+    12: 
+    13: <% if @product.errors.any? %>
+    14:   <div id="error_explanation">
+  
+app/views/products/show.html.erb:11:in `_app_views_products_show_html_erb__713779819194921688_69972201221400'
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:25:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.4ms) [cache miss]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:26:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:26:10 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (9.3ms) [cache miss]
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 79ms (Views: 68.7ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (104.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20170613171838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price_in_cents" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613171838"]]
+  [1m[35m (100.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReviews (20170614195303)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "comment" text, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170614195303"]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-14 23:26:48.202041"], ["updated_at", "2017-06-14 23:26:48.202041"]]
+  [1m[35m (68.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sloth Repelant"], ["description", "Take the fast lane!"], ["price_in_cents", 1800], ["created_at", "2017-06-14 23:27:02.299179"], ["updated_at", "2017-06-14 23:27:02.299179"]]
+  [1m[35m (428.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Snake Bite Kit"], ["description", "Ouch!"], ["price_in_cents", 2000], ["created_at", "2017-06-14 23:27:02.731647"], ["updated_at", "2017-06-14 23:27:02.731647"]]
+  [1m[35m (94.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price_in_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rain Coat"], ["description", "Stay dry!"], ["price_in_cents", 1600], ["created_at", "2017-06-14 23:27:02.833112"], ["updated_at", "2017-06-14 23:27:02.833112"]]
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "Stinks!"], ["rating", 1], ["created_at", "2017-06-14 23:27:02.973773"], ["updated_at", "2017-06-14 23:27:02.973773"]]
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 1], ["comment", "Yummy!"], ["rating", 5], ["created_at", "2017-06-14 23:27:03.052000"], ["updated_at", "2017-06-14 23:27:03.052000"]]
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "reviews" ("product_id", "comment", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["product_id", 2], ["comment", "meh"], ["rating", 3], ["created_at", "2017-06-14 23:27:03.143096"], ["updated_at", "2017-06-14 23:27:03.143096"]]
+  [1m[35m (70.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:27:16 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (9.1ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 215ms (Views: 184.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-14 19:27:18 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:27:20 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (12.9ms) [cache miss]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 86ms (Views: 77.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2/reviews/3/edit" for 127.0.0.1 at 2017-06-14 19:27:23 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (17.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.0ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 20.6ms | ActiveRecord: 17.4ms)
+
+
+Started PATCH "/products/2/reviews/3" for 127.0.0.1 at 2017-06-14 19:27:29 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"btdYkb+0e10BzhtGYOVKqo+3dYC7/LOoe3kE1duLabLh2uegQ5UOmlZIA3SaHkAktWWA9EPr3/S66H+yG8896g==", "review"=>{"comment"=>"meh", "rating"=>"2"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 2], ["updated_at", "2017-06-14 23:27:29.089179"], ["id", 3]]
+  [1m[35m (116.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 128ms (ActiveRecord: 117.5ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:27:29 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 103ms (Views: 74.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-06-14 19:27:32 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.3ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2/reviews/1/edit" for 127.0.0.1 at 2017-06-14 19:28:27 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.1ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 18.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/products/2/reviews/1" for 127.0.0.1 at 2017-06-14 19:28:36 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6kxsJWKpXY1BdYdvRZ0zFLdq0Mc2BUXOwM1UkjG/+yY2Y3b5cGzvbaLipfZBxZAZJgjdHREgzoFQsCRRp6PAxA==", "review"=>{"comment"=>"Stinky!", "rating"=>"1"}, "commit"=>"Update Review", "product_id"=>"2", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["comment", "Stinky!"], ["updated_at", "2017-06-14 23:28:36.426777"], ["id", 1]]
+  [1m[35m (120.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 140ms (ActiveRecord: 120.9ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:28:36 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 66ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:30:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (8.5ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 197ms (Views: 167.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:30:08 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (9.1ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 75ms (Views: 56.5ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:30:11 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQ3NKaDBtrCfVVjartqGHjYrF1hGEHCxMyzvBcRoFI8Zrtwn+R7r2HL5pxJlQEfhmVQpCTf1CjzMur8ZzELfIw==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "reviews" SET "rating" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["rating", 4], ["updated_at", "2017-06-14 23:30:11.811980"], ["id", 2]]
+  [1m[35m (103.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1/reviews
+Completed 302 Found in 119ms (ActiveRecord: 104.9ms)
+
+
+Started GET "/products/1/reviews" for 127.0.0.1 at 2017-06-14 19:30:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/1/reviews"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/1/reviews" for 127.0.0.1 at 2017-06-14 19:31:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/1/reviews"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:31:09 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.0ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 45ms (Views: 18.8ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:31:12 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YvYi4aVmCIB0G0Qp8fwugpkO0IExX0kYV4K4XB+B2rTgfvkU0VADhjK526LWvBryJsrKoo3iwoMS43oeqRX4pw==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/id/reviews
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/products/id/reviews" for 127.0.0.1 at 2017-06-14 19:31:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/id/reviews"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/id/reviews" for 127.0.0.1 at 2017-06-14 19:31:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/id/reviews"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:31:34 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.0ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 18.0ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:31:35 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WMGwzVGy5vGISHl9qDbhiJDVW+4cUo5qi3MWKirIhg3aSWs4JYTt987q5vaPdtX4LxFBzaDvBfHOEtRonFykHg==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (undefined local variable or method `review_id' for #<ReviewsController:0x007fb284ffc6f0>
+Did you mean?  @review):
+  
+app/controllers/reviews_controller.rb:25:in `update'
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:31:47 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.2ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 18.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:31:48 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (10.7ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 85ms (Views: 70.7ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:31:50 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvYxt4QzOgzG+2Gop+Eei82MUEgbMivT499Zy0vPEPq8fupC8AUxCoBZ/iOAoSr7ckhKa6ePoEimvpuJ/Vsy6Q==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/review_id/reviews
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/products/review_id/reviews" for 127.0.0.1 at 2017-06-14 19:31:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/products/review_id/reviews"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:32:19 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.4ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 47ms (Views: 19.2ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:32:21 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XAGzzFgPlni/ntzUb2S6kfVHbLvwM8bB0c8VxpQDR57eiWg5LDmdfvk8Q19IJI7hSoN2mEyOTVqUrteEIpdljQ==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `review_url' for #<ReviewsController:0x007fb285bebd58>
+Did you mean?  review_params):
+  
+app/controllers/reviews_controller.rb:25:in `update'
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:33:00 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XAGzzFgPlni/ntzUb2S6kfVHbLvwM8bB0c8VxpQDR57eiWg5LDmdfvk8Q19IJI7hSoN2mEyOTVqUrteEIpdljQ==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 30ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:33:00 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-06-14 19:33:09 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.7ms) [cache miss]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1/reviews/2/edit" for 127.0.0.1 at 2017-06-14 19:33:11 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (3.8ms) [cache miss]
+  Rendered reviews/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 43ms (Views: 32.4ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/products/1/reviews/2" for 127.0.0.1 at 2017-06-14 19:33:12 -0400
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"00OpdwQzhTVOOenrciO5k4tprYeoodLWhzJCcIOkLll74Lh5XezYXaOVFiO5uXhsJBaT1tlEqFt4pBJsi47l9Q==", "review"=>{"comment"=>"Yummy!", "rating"=>"4"}, "commit"=>"Update Review", "product_id"=>"1", "id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ? AND "reviews"."id" = ? LIMIT ?[0m  [["product_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products.product_id
+Completed 302 Found in 60ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/products.product_id" for 127.0.0.1 at 2017-06-14 19:33:12 -0400
+Processing by ProductsController#index as 
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+

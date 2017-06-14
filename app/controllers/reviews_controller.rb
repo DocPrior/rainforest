@@ -17,12 +17,15 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:product_id])
-    if @product.reviews.update(review_params)
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.find(params[:id])
+    if @review.update(review_params)
+    # if @product.reviews.update(review_params)
       flash[:notice] = "Review Updated!"
       redirect_to products_path(:product_id)
     else
       redirect_back_or_to @review
+    end
   end
 
   def destroy

@@ -8,7 +8,7 @@
 
 <h4>New Review</h4>
 
-<%= render 'form', review: @review %>
+<%= render '/reviews/form', review: @review %>
 
 <% if @product.errors.any? %>
   <div id="error_explanation">
