@@ -2,3 +2,52 @@
 <%=link_to("Delete", product_path(@product.id), method: :delete, data: {confirm: "Are you sure you want to delete?"}) %>
 
 <p><%=@product.name%>, <%=@product.description%>, <%=@product.price_in_dollars%></p>
+
+
+<!--ADD NEW REVIEW  -->
+
+<h4>New Review</h4>
+
+  <%= form_for([@product, @review]) do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :comment %><br />
+      <%= f.text_area :comment %>
+    </div>
+    <div class="field">
+      <%= f.label :rating %><br />
+      <%= f.number_field :rating %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+
+<!--LIST existing reviews  -->
+<div class="Reviews">
+
+ <ol>
+   <% @product.reviews.each do |review| %>
+
+   <li><p><%= review.created_at %></p>
+      <p><%= review.comment %></p>
+      <p><%= review.rating %></p>
+   </li>
+   <% end %>
+ </ol>
+
+</div>
+
+<
