@@ -8,31 +8,20 @@
 
 <h4>New Review</h4>
 
-  <%= form_for([@product, @review]) do |f| %>
-    <% if @review.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+<%= render 'form', review: @review %>
 
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+    <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
     <% end %>
+   </ul>
+ </div>
+<% end %>
 
-    <div class="field">
-      <%= f.label :comment %><br />
-      <%= f.text_area :comment %>
-    </div>
-    <div class="field">
-      <%= f.label :rating %><br />
-      <%= f.number_field :rating %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
 
 
 <!--LIST existing reviews  -->
