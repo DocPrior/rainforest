@@ -23,3 +23,21 @@ Product.create(
   description: "Stay dry!",
   price_in_cents: 1600
   )
+
+Review.create(
+  product_id: Product.last,
+  comment: 'Stinks!',
+  rating: 1
+)
+
+Review.create(
+  product_id: Product.first,
+  comment: 'Yummy!',
+  rating: 5
+)
+
+Review.create(
+  product_id: Product.last,
+  comment: 'meh',
+  rating: '3'
+)

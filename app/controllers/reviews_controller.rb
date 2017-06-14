@@ -1,12 +1,13 @@
 class ReviewsController < ApplicationController
 
   def create
-    @review = Review.create(review_params)
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.create(review_params)
     if @review.save
       flash[:notice] = "Review saved!"
       redirect_to products_path
     else
-      render :new
+      render '/products/show'
     end
   end
 
@@ -23,7 +24,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    {comment: params[:review][:comment], rating: [:review][:rating], product_id: params[:product_id]}
+    params.required(:review).permit( :comment, :rating)
   end
 
 end
